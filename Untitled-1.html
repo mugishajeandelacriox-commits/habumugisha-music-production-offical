@@ -1,0 +1,3536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HABUMUGISHA Music PRODUCTION | Professional Music Platform</title>
+<link rel="icon" type="image/jpeg" href="habu.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+color:#111827;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.logo{
+font-size:1.8rem;
+font-weight:800;
+color:#2563eb;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:42px;
+height:42px;
+border-radius:50%;
+object-fit:cover;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#111827;
+font-weight:600;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#2563eb;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:120px 8%;
+gap:50px;
+background:#eef1f5;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.small-text{
+color:#2563eb;
+font-size:.8rem;
+font-weight:bold;
+letter-spacing:1px;
+margin-bottom:20px;
+display:block;
+text-transform:uppercase;
+}
+
+.hero-text h1{
+font-size:4rem;
+line-height:1.1;
+margin-bottom:25px;
+font-weight:900;
+}
+
+.hero-text h1 span{
+color:#2563eb;
+}
+
+.hero-text p{
+font-size:1.2rem;
+line-height:1.8;
+color:#4b5563;
+max-width:550px;
+margin-bottom:30px;
+}
+
+.rating{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:25px;
+color:#555;
+font-size:.95rem;
+flex-wrap:wrap;
+}
+
+.rating i{
+color:#facc15;
+}
+
+.music-icons{
+display:flex;
+gap:20px;
+font-size:1.6rem;
+margin-bottom:35px;
+color:#666;
+}
+
+.buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 35px;
+border:none;
+border-radius:12px;
+font-size:1rem;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn-primary{
+background:#2563eb;
+color:white;
+}
+
+.btn-primary:hover{
+transform:translateY(-5px);
+}
+
+.btn-secondary{
+background:#e5e7eb;
+color:#111827;
+}
+
+.credit{
+margin-top:25px;
+font-size:.9rem;
+color:#6b7280;
+}
+
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+min-width:300px;
+}
+
+.hero-image img{
+width:100%;
+max-width:550px;
+object-fit:contain;
+}
+
+/* SECTION */
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:2.8rem;
+margin-bottom:15px;
+}
+
+.section-title p{
+color:#6b7280;
+}
+
+/* SONGS */
+
+.song-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.song-card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.song-card:hover{
+transform:translateY(-10px);
+}
+
+.song-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.song-content{
+padding:25px;
+}
+
+.song-content h3{
+margin-bottom:10px;
+font-size:1.5rem;
+}
+
+.song-content p{
+color:#6b7280;
+margin-bottom:15px;
+}
+
+.song-content button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+background:#2563eb;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* STORE */
+
+.store-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.store-card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.store-card:hover{
+transform:translateY(-10px);
+}
+
+.store-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.store-content{
+padding:25px;
+}
+
+.badge{
+display:inline-block;
+padding:8px 14px;
+background:#2563eb;
+color:white;
+border-radius:30px;
+font-size:.8rem;
+margin-bottom:15px;
+}
+
+.price{
+font-size:1.7rem;
+font-weight:bold;
+color:#2563eb;
+margin:20px 0;
+}
+
+.store-content button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+background:#111827;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* ABOUT */
+
+.about{
+background:white;
+border-radius:30px;
+padding:50px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.about p{
+max-width:850px;
+margin:auto;
+line-height:1.9;
+font-size:1.1rem;
+color:#4b5563;
+}
+
+/* CONTACT */
+
+.contact-form{
+max-width:700px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:16px;
+margin:12px 0;
+border:1px solid #d1d5db;
+border-radius:12px;
+font-size:1rem;
+}
+
+.contact-form button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:12px;
+background:#2563eb;
+color:white;
+font-size:1rem;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* MODERN FOOTER */
+
+.modern-footer{
+background:#f3f4f6;
+margin-top:100px;
+}
+
+.footer-cta{
+background:linear-gradient(90deg,#2563eb,#0ea5a4);
+padding:70px 20px;
+text-align:center;
+color:white;
+}
+
+.footer-cta h2{
+font-size:2.7rem;
+margin-bottom:15px;
+font-weight:800;
+}
+
+.footer-cta p{
+font-size:1.1rem;
+margin-bottom:25px;
+opacity:.95;
+}
+
+.footer-cta button{
+padding:15px 35px;
+border:none;
+border-radius:12px;
+background:white;
+color:#2563eb;
+font-weight:bold;
+font-size:1rem;
+cursor:pointer;
+transition:.3s;
+}
+
+.footer-content{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:50px;
+padding:70px 8%;
+}
+
+.footer-column h3{
+margin-bottom:20px;
+font-size:1.1rem;
+}
+
+.footer-column a{
+display:block;
+margin-bottom:15px;
+text-decoration:none;
+color:#4b5563;
+}
+
+.socials{
+display:flex;
+gap:15px;
+margin-bottom:20px;
+}
+
+.socials a{
+width:42px;
+height:42px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:white;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+color:#111827;
+text-decoration:none;
+}
+
+.newsletter-text{
+margin:20px 0 10px;
+color:#4b5563;
+font-size:.95rem;
+}
+
+.newsletter{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.newsletter input{
+flex:1;
+padding:13px;
+border:1px solid #d1d5db;
+border-radius:10px;
+}
+
+.newsletter button{
+padding:13px 18px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+.app-buttons{
+display:flex;
+gap:10px;
+margin-top:10px;
+flex-wrap:wrap;
+}
+
+.app-buttons button{
+padding:12px 18px;
+border:1px solid #d1d5db;
+background:white;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+}
+
+.footer-bottom{
+border-top:1px solid #d1d5db;
+padding:25px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.footer-logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:800;
+font-size:1.2rem;
+}
+
+.footer-logo img{
+width:40px;
+height:40px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.footer-bottom p{
+color:#6b7280;
+font-size:.95rem;
+}
+
+.footer-bottom select{
+padding:10px 15px;
+border-radius:10px;
+border:1px solid #d1d5db;
+background:white;
+}
+
+/* TOAST */
+
+.toast{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#2563eb;
+color:white;
+padding:15px 25px;
+border-radius:50px;
+font-weight:bold;
+z-index:9999;
+animation:fade 3s forwards;
+}
+
+@keyframes fade{
+0%{opacity:0;transform:translateY(20px);}
+10%{opacity:1;transform:translateY(0);}
+90%{opacity:1;}
+100%{opacity:0;}
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding-top:140px;
+}
+
+.hero-text h1{
+font-size:2.8rem;
+}
+
+.rating,
+.music-icons,
+.buttons{
+justify-content:center;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.footer-bottom{
+flex-direction:column;
+text-align:center;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+    <!-- FULL SCREEN LOGIN -->
+
+<div id="loginPage">
+
+<div class="login-box">
+
+<h1>🎵 HABUMUGISHA MUSIC</h1>
+
+<p>Please login to continue</p>
+
+<form id="loginForm">
+
+<input type="text" placeholder="Username" required>
+
+<input type="password" placeholder="Password" required>
+
+<button type="submit">
+Login Now
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<style>
+
+/* HIDE WEBSITE FIRST */
+
+body{
+overflow:hidden;
+}
+
+/* LOGIN PAGE */
+
+#loginPage{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:linear-gradient(135deg,#2563eb,#111827);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999999;
+}
+
+.login-box{
+background:white;
+padding:45px;
+border-radius:25px;
+width:90%;
+max-width:420px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.3);
+animation:zoom .5s ease;
+}
+
+@keyframes zoom{
+from{
+transform:scale(.7);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.login-box h1{
+color:#2563eb;
+margin-bottom:15px;
+font-size:2rem;
+}
+
+.login-box p{
+color:#666;
+margin-bottom:25px;
+}
+
+.login-box input{
+width:100%;
+padding:16px;
+margin-bottom:18px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:1rem;
+}
+
+.login-box button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:12px;
+background:#2563eb;
+color:white;
+font-size:1rem;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.login-box button:hover{
+background:#1d4ed8;
+}
+
+</style>
+
+<script>
+
+/* LOGIN SYSTEM */
+
+document.getElementById("loginForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+/* HIDE LOGIN PAGE */
+
+document.getElementById("loginPage").style.display="none";
+
+/* OPEN WEBSITE */
+
+document.body.style.overflow="auto";
+
+/* SUCCESS */
+
+showToast("✅ Login Successful");
+
+});
+
+</script>
+
+<!-- WHATSAPP BUTTON -->
+
+<a href="https://wa.me/250788704773" 
+class="whatsapp-btn" 
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<style>
+
+.whatsapp-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:2rem;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+z-index:99999;
+animation:float 2s infinite;
+transition:.3s;
+}
+
+.whatsapp-btn:hover{
+transform:scale(1.1);
+background:#1ebe5d;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-8px);
+}
+100%{
+transform:translateY(0);
+}
+}
+
+</style>
+
+<!-- SOCIAL MEDIA FLOATING ICONS -->
+
+<div class="social-fixed">
+
+<a href="https://facebook.com/" target="_blank" class="facebook">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://instagram.com/" target="_blank" class="instagram">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://twitter.com/" target="_blank" class="twitter">
+<i class="fab fa-x-twitter"></i>
+</a>
+
+</div>
+
+<style>
+
+/* SOCIAL ICONS */
+
+.social-fixed{
+position:fixed;
+left:20px;
+bottom:25px;
+display:flex;
+flex-direction:column;
+gap:15px;
+z-index:99999;
+}
+
+.social-fixed a{
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:1.4rem;
+text-decoration:none;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+transition:.3s;
+animation:updown 2s infinite;
+}
+
+.social-fixed a:hover{
+transform:scale(1.1);
+}
+
+.facebook{
+background:#1877f2;
+}
+
+.instagram{
+background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.twitter{
+background:#111827;
+}
+
+@keyframes updown{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-6px);
+}
+100%{
+transform:translateY(0);
+}
+}
+
+</style>
+
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+<img src="habu.png" alt="Logo">
+HABUMUGISHA Music PRODUCTION
+</div>
+
+
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#songs">Songs</a></li>
+<li><a href="#store">Store</a></li>
+<li><a href="#about">About</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<span class="small-text">MEET UBUHANZI</span>
+
+<h1>
+Your Music Career,<br>
+<span>All in One Platform</span>
+</h1>
+
+<p>
+Record, distribute and monetize your music with HABUMUGISHA Music PRODUCTION —
+Rwanda's complete hub for artists, producers and creators.
+</p>
+
+<div class="rating">
+
+<div>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+
+<span>4.8/5.0</span>
+<span>Trusted by 1,000+ artists across Rwanda</span>
+
+</div>
+
+<div class="music-icons">
+<i class="fas fa-music"></i>
+<i class="fas fa-compact-disc"></i>
+<i class="fas fa-play-circle"></i>
+</div>
+
+<div class="buttons">
+
+<button class="btn btn-primary" onclick="showToast('🎵 Welcome to MO Music')">
+Start Now →
+</button>
+
+<button class="btn btn-secondary">
+Learn More
+</button>
+
+</div>
+
+<div class="credit">
+No credit card required
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="habu.png" alt="Artist">
+</div>
+
+</section>
+
+<!-- SONGS -->
+
+<section id="songs">
+
+<div class="section-title">
+<h2>🔥 Trending Songs</h2>
+<p>Discover latest music from HABUMUGISHA Music PRODUCTION</p>
+</div>
+
+<div class="song-grid">
+
+<div class="song-card">
+
+<img src="inkota.png.PNG">
+
+<div class="song-content">
+
+<h3>Love of god Again</h3>
+
+<p>HASHIMWE 2026</p>
+
+<video controls style="width:100%;margin-bottom:15px;">
+<source src="HASHIMWE - Inshuti Za Yesu Choir EPR Kanombe (Official Live Video)_2.mp4">
+</video>
+
+<button onclick="showToast('🎧 Playing Love Again')">
+Play Song
+</button>
+
+</div>
+</div>
+
+<div class="song-card">
+
+<img src="ampa.png.PNG">
+
+<div class="song-content">
+
+<h3>prays Vibes</h3>
+
+<p>AMPA UBUZIMA  Mix</p>
+
+<video controls style="width:100%;margin-bottom:15px;">
+<source src="AMPA UBUZIMA - Inshuti Za Yesu Choir EPR Kanombe (Official Live Video)_2.mp4">
+</video>
+
+<button onclick="showToast('🎧 Playing Night Vibes')">
+Play Song
+</button>
+
+</div>
+</div>
+
+<div class="song-card">
+
+<img src="Capture nzaby.png">
+
+<div class="song-content">
+
+<h3>Dream Life</h3>
+
+<p>NZABYAMAMAZA song</p>
+
+<video controls style="width:100%;margin-bottom:15px;">
+<source src="NZABYAMAMAZA - Inshuti Za Yesu Choir EPR Kanombe (Official Live Video).mp4">
+</video>
+
+<button onclick="showToast('🎧 Playing Dream Life')">
+Play Song
+</button>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- PUT THIS SECTION INSIDE YOUR FIRST WEBSITE -->
+<!-- PLACE IT BELOW HERO SECTION OR BELOW SONG SECTION -->
+
+<section class="features-section" id="features">
+
+<div class="section-title">
+<h1>Everything You Need to Create Music</h1>
+<p>
+From recording to collaboration to distribution
+</p>
+</div>
+
+<div class="features-grid">
+
+<!-- CARD 1 -->
+
+<div class="feature-card">
+
+<div class="icon blue">
+<i class="fas fa-microphone"></i>
+</div>
+
+<h2>Press Record, Start Creating</h2>
+
+<p>
+Record your music directly from the platform.
+No expensive studio needed — capture your sound anywhere, anytime.
+</p>
+
+<ul class="feature-list">
+<li>One-click recording</li>
+<li>Cloud storage</li>
+<li>High-quality audio capture</li>
+</ul>
+
+<a href="#" class="learn-more">
+Learn more <i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="feature-card">
+
+<div class="icon green">
+<i class="fas fa-users"></i>
+</div>
+
+<h2>Work Together, Remotely</h2>
+
+<p>
+Connect with producers and artists in real-time.
+Share recordings, get feedback, and create together no matter where you are.
+</p>
+
+<ul class="feature-list">
+<li>Live chat during sessions</li>
+<li>Version control</li>
+<li>Access management</li>
+</ul>
+
+<a href="#" class="learn-more">
+Learn more <i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="feature-card">
+
+<div class="icon orange">
+<i class="fas fa-search"></i>
+</div>
+
+<h2>Find Your Perfect Producer</h2>
+
+<p>
+Browse verified producers, DJs and musicians.
+Listen to their work and start collaborating.
+</p>
+
+<ul class="feature-list">
+<li>Filter by genre & style</li>
+<li>Producer portfolios</li>
+<li>Verified profiles</li>
+</ul>
+
+<a href="#" class="learn-more">
+Learn more <i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="feature-card">
+
+<div class="icon purple">
+<i class="fas fa-code-branch"></i>
+</div>
+
+<h2>Track Every Change</h2>
+
+<p>
+Track recordings, compare versions
+and restore old projects anytime.
+</p>
+
+<ul class="feature-list">
+<li>Version history</li>
+<li>Compare revisions</li>
+<li>Restore projects</li>
+</ul>
+
+<a href="#" class="learn-more">
+Learn more <i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+<!-- CARD 5 -->
+
+<div class="feature-card">
+
+<div class="icon teal">
+<i class="fas fa-percent"></i>
+</div>
+
+<h2>Royalty Split System</h2>
+
+<p>
+Automatically calculate payments and
+manage artist collaborations professionally.
+</p>
+
+<ul class="feature-list">
+<li>Add collaborators</li>
+<li>Automatic calculations</li>
+<li>Royalty management</li>
+</ul>
+
+<a href="#" class="learn-more">
+Learn more <i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+<!-- CARD 6 -->
+
+<div class="feature-card">
+
+<div class="icon red">
+<i class="fas fa-lock"></i>
+</div>
+
+<h2>Secure Cloud Storage</h2>
+
+<p>
+Store all music safely in the cloud
+with private access control settings.
+</p>
+
+<ul class="feature-list">
+<li>Cloud backups</li>
+<li>Access controls</li>
+<li>Private/public settings</li>
+</ul>
+
+<a href="#" class="learn-more">
+Learn more <i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+/* FEATURES SECTION */
+
+.features-section{
+padding:100px 8%;
+background:#f8fafc;
+}
+
+.features-section .section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.features-section .section-title h1{
+font-size:3rem;
+font-weight:800;
+margin-bottom:15px;
+color:#111827;
+}
+
+.features-section .section-title p{
+font-size:1.1rem;
+color:#6b7280;
+}
+
+.features-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.feature-card{
+background:white;
+padding:35px;
+border-radius:20px;
+border:1px solid #e5e7eb;
+transition:.3s;
+box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+
+.feature-card:hover{
+transform:translateY(-10px);
+box-shadow:0 12px 25px rgba(0,0,0,.08);
+border-color:#2563eb;
+}
+
+.icon{
+width:60px;
+height:60px;
+border-radius:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:1.5rem;
+margin-bottom:25px;
+}
+
+.blue{
+background:#dbeafe;
+color:#2563eb;
+}
+
+.green{
+background:#dcfce7;
+color:#16a34a;
+}
+
+.orange{
+background:#ffedd5;
+color:#ea580c;
+}
+
+.purple{
+background:#ede9fe;
+color:#7c3aed;
+}
+
+.teal{
+background:#ccfbf1;
+color:#0f766e;
+}
+
+.red{
+background:#fee2e2;
+color:#dc2626;
+}
+
+.feature-card h2{
+font-size:1.5rem;
+margin-bottom:15px;
+font-weight:700;
+color:#111827;
+}
+
+.feature-card p{
+color:#6b7280;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+.feature-list{
+list-style:none;
+margin-bottom:22px;
+}
+
+.feature-list li{
+margin-bottom:12px;
+color:#4b5563;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.feature-list li::before{
+content:"•";
+color:#2563eb;
+font-size:1.2rem;
+}
+
+.learn-more{
+display:inline-flex;
+align-items:center;
+gap:8px;
+text-decoration:none;
+color:#2563eb;
+font-weight:600;
+transition:.3s;
+}
+
+.learn-more:hover{
+gap:12px;
+}
+
+@media(max-width:768px){
+
+.features-section{
+padding:70px 20px;
+}
+
+.features-section .section-title h1{
+font-size:2.2rem;
+}
+
+.feature-card{
+padding:28px;
+}
+
+}
+
+</style>
+
+<!-- STORE -->
+
+<section id="store">
+
+<div class="section-title">
+<h2>🛒 Music Store</h2>
+<p>Buy albums, concert tickets and VIP access</p>
+</div>
+
+<div class="store-grid">
+
+<div class="store-card">
+
+<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop">
+
+<div class="store-content">
+
+<div class="badge">🔥 Trending</div>
+
+<h3>MO Album 2026</h3>
+
+<p>Exclusive album collection with premium tracks.</p>
+
+<div class="price">5,000 RWF</div>
+
+<button onclick="showToast('🛒 Album Selected')">
+Buy Album
+</button>
+
+</div>
+</div>
+
+<div class="store-card">
+
+<img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop">
+
+<div class="store-content">
+
+<div class="badge">🎫 Live Concert</div>
+
+<h3>Kigali Live Event</h3>
+
+<p>Experience MO Music live performance.</p>
+
+<div class="price">10,000 RWF</div>
+
+<button onclick="showToast('🎟 Ticket Selected')">
+Buy Ticket
+</button>
+
+</div>
+</div>
+
+<div class="store-card">
+
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop">
+
+<div class="store-content">
+
+<div class="badge">⭐ VIP</div>
+
+<h3>VIP Meet & Greet</h3>
+
+<p>Exclusive backstage access and premium fan package.</p>
+
+<div class="price">25,000 RWF</div>
+
+<button onclick="showToast('👑 VIP Access Selected')">
+Get VIP
+</button>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="section-title">
+<h2>🎤 About habumugisha music PRODUCTION</h2>
+</div>
+
+<div class="about">
+
+<p>HABUMUGISHA Music PRODUCTION ni platform ya muzika ifasha abahanzi gukora,
+gusohora no kwamamaza umuziki wabo ku rwego rwa modern.
+Duhuza producers, artists na fans binyuze muri technology
+igezweho ndetse n'ibitaramo bya live.
+</p>
+
+</div>
+
+</section>
+
+<!-- PREMIUM -->
+
+<section class="premium-testimonials" id="premium">
+
+<div class="testimonial-wrapper">
+
+<div class="testimonial-header">
+<h2>Why Artists Choose Premium</h2>
+<p>✨ See how Premium helps artists grow ✨</p>
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+
+<div class="testimonial-text">
+The advanced analytics helped me understand my audience better.
+I’ve doubled my streams since upgrading.
+</div>
+
+<div class="artist-info">
+<h3>
+producer mugisha
+<span>Premium Member</span>
+</h3>
+
+<div class="premium-feature">
+<i class="fas fa-chart-line"></i>
+Advanced Analytics
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+
+<div class="testimonial-text">
+Getting featured on the Discover page brought so many new fans.
+Worth every franc.
+</div>
+
+<div class="artist-info">
+<h3>
+singer vanesa
+<span>Premium Member</span>
+</h3>
+
+<div class="premium-feature">
+<i class="fas fa-bolt"></i>
+Featured Placement
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+
+<div class="testimonial-text">
+Unlimited recordings means I can experiment freely.
+No more worrying about hitting limits.
+</div>
+
+<div class="artist-info">
+<h3>
+dj olivier
+<span>Premium Member</span>
+</h3>
+
+<div class="premium-feature">
+<i class="fas fa-microphone-alt"></i>
+Unlimited Recordings
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="trusted-text">
+<i class="fas fa-headphones"></i>
+Trusted by independent artists worldwide
+</div>
+
+</div>
+
+</section>
+<style>
+    /* PREMIUM TESTIMONIALS */
+
+.premium-testimonials{
+padding:100px 8%;
+background:linear-gradient(145deg,#f9f5f0 0%,#f0ebe4 100%);
+}
+
+.testimonial-wrapper{
+background:#fff;
+border-radius:40px;
+overflow:hidden;
+box-shadow:0 25px 45px rgba(0,0,0,.08);
+}
+
+.testimonial-header{
+text-align:center;
+padding:70px 30px 30px;
+border-bottom:1px solid #f1ebe5;
+}
+
+.testimonial-header h2{
+font-size:3rem;
+font-weight:800;
+margin-bottom:15px;
+background:linear-gradient(135deg,#1f2b3c,#2a3f54);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.testimonial-header p{
+font-size:1.1rem;
+color:#5b6e8c;
+}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:50px;
+}
+
+.testimonial-card{
+background:#fefcf9;
+padding:35px;
+border-radius:30px;
+border:1px solid #f3ede7;
+transition:.3s;
+}
+
+.testimonial-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 35px rgba(0,0,0,.08);
+background:white;
+}
+
+.stars{
+display:flex;
+gap:8px;
+margin-bottom:20px;
+color:#f5b042;
+font-size:1.1rem;
+}
+
+.testimonial-text{
+font-size:1rem;
+line-height:1.8;
+color:#374151;
+margin-bottom:30px;
+position:relative;
+}
+
+.testimonial-text::before{
+content:"“";
+font-size:2rem;
+color:#c2a575;
+}
+
+.testimonial-text::after{
+content:"”";
+font-size:2rem;
+color:#c2a575;
+}
+
+.artist-info{
+border-top:1px solid #f0e2d4;
+padding-top:20px;
+}
+
+.artist-info h3{
+font-size:1.2rem;
+margin-bottom:12px;
+}
+
+.artist-info span{
+background:#f2e8de;
+padding:6px 14px;
+border-radius:30px;
+font-size:.7rem;
+margin-left:10px;
+color:#8b6b4b;
+}
+
+.premium-feature{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:8px 15px;
+border-radius:30px;
+background:#fef1e6;
+color:#b47c48;
+font-size:.85rem;
+font-weight:600;
+}
+
+.trusted-text{
+text-align:center;
+padding:25px;
+font-size:.9rem;
+color:#b9aa99;
+border-top:1px solid #f7efe8;
+}
+
+.trusted-text i{
+margin-right:8px;
+}
+
+@media(max-width:768px){
+
+.testimonial-header h2{
+font-size:2rem;
+}
+
+.testimonial-grid{
+padding:30px 20px;
+}
+
+}
+
+
+</style>
+
+c
+<style>
+/* PRODUCERS SECTION */
+
+.producers-section{
+padding:90px 8%;
+background:#f8f8f8;
+}
+
+.producer-filters{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.producer-filters button{
+padding:10px 18px;
+border:none;
+background:white;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+border:1px solid #ddd;
+transition:.3s;
+}
+
+.producer-filters button.active,
+.producer-filters button:hover{
+background:#2563eb;
+color:white;
+}
+
+.producer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.producer-card{
+background:white;
+border:1px solid #ddd;
+border-radius:18px;
+padding:22px;
+transition:.3s;
+}
+
+.producer-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.producer-top{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:20px;
+}
+
+.producer-avatar{
+width:52px;
+height:52px;
+border-radius:50%;
+background:#0ea5e9;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+}
+
+.producer-top h3{
+font-size:1rem;
+}
+
+.producer-top p{
+font-size:.85rem;
+color:#666;
+}
+
+.verified-badge{
+background:#2563eb;
+color:white;
+padding:4px 8px;
+border-radius:8px;
+font-size:.7rem;
+margin-left:6px;
+}
+
+.producer-info p{
+font-size:.9rem;
+margin-bottom:12px;
+color:#555;
+}
+
+.producer-tags{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin-bottom:12px;
+}
+
+.producer-tags span{
+background:#f1f5f9;
+padding:5px 10px;
+border-radius:8px;
+font-size:.75rem;
+}
+
+.producer-buttons{
+display:flex;
+gap:10px;
+margin-top:18px;
+}
+
+.view-btn,
+.collab-btn{
+flex:1;
+padding:11px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+}
+
+.view-btn{
+background:#f3f4f6;
+}
+
+.collab-btn{
+background:#2563eb;
+color:white;
+}
+
+.browse-btn-wrap{
+text-align:center;
+margin-top:40px;
+}
+
+.browse-btn{
+padding:14px 30px;
+border:none;
+background:white;
+border:1px solid #ddd;
+border-radius:12px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.browse-btn:hover{
+background:#2563eb;
+color:white;
+}
+
+</style>
+<!-- FAQ SECTION -->
+
+<section class="faq-section">
+
+<div class="section-title">
+<h2>Frequently Asked Questions</h2>
+<p>Everything you need to know about pricing</p>
+</div>
+
+<div class="faq-container">
+
+<!-- FAQ 1 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+What's included in the free plan?
+<i class="fas fa-chevron-down"></i>
+</button>
+
+<div class="faq-answer">
+<p>
+The free plan includes music uploads, artist profile creation,
+basic analytics and limited storage access.
+</p>
+</div>
+
+</div>
+
+<!-- FAQ 2 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+Can I upgrade or downgrade anytime?
+<i class="fas fa-chevron-down"></i>
+</button>
+
+<div class="faq-answer">
+<p>
+Yes. You can change your subscription plan anytime directly
+from your account dashboard.
+</p>
+</div>
+
+</div>
+
+<!-- FAQ 3 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+What payment methods do you accept?
+<i class="fas fa-chevron-down"></i>
+</button>
+
+<div class="faq-answer">
+<p>
+We accept Mobile Money, Visa cards, Mastercard and PayPal.
+</p>
+</div>
+
+</div>
+
+<!-- FAQ 4 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+Do I lose my data if I cancel Premium?
+<i class="fas fa-chevron-down"></i>
+</button>
+
+<div class="faq-answer">
+<p>
+No. Your projects remain محفوظ but premium features become disabled.
+</p>
+</div>
+
+</div>
+
+<!-- FAQ 5 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+Is there a discount for annual billing?
+<i class="fas fa-chevron-down"></i>
+</button>
+
+<div class="faq-answer">
+<p>
+Yes. Annual plans include up to 20% discount compared to monthly plans.
+</p>
+</div>
+
+</div>
+
+<!-- FAQ 6 -->
+
+<div class="faq-item active">
+
+<button class="faq-question">
+What's the difference between Premium and Enterprise?
+<i class="fas fa-chevron-up"></i>
+</button>
+
+<div class="faq-answer">
+<p>
+Premium is for individual artists. Enterprise is for labels,
+organizations and teams managing multiple artist profiles with
+advanced tools and dedicated support.
+</p>
+</div>
+
+</div>
+
+</div>
+<script>
+
+/* FAQ TOGGLE */
+
+const faqItems=document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item=>{
+
+const btn=item.querySelector('.faq-question');
+
+btn.addEventListener('click',()=>{
+
+faqItems.forEach(faq=>{
+if(faq!==item){
+faq.classList.remove('active');
+}
+});
+
+item.classList.toggle('active');
+
+});
+
+});
+
+</script>
+
+</section>
+<style>
+/* FAQ SECTION */
+
+.faq-section{
+padding:90px 8%;
+background:#f8f8f8;
+}
+
+.faq-container{
+max-width:900px;
+margin:auto;
+margin-top:50px;
+}
+
+.faq-item{
+border-bottom:1px solid #d1d5db;
+padding:18px 0;
+}
+
+.faq-question{
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:none;
+border:none;
+font-size:1rem;
+font-weight:600;
+cursor:pointer;
+padding:5px 0;
+color:#111827;
+}
+
+.faq-question i{
+font-size:.9rem;
+color:#666;
+transition:.3s;
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:max-height .4s ease;
+}
+
+.faq-answer p{
+padding-top:15px;
+line-height:1.8;
+color:#6b7280;
+font-size:.95rem;
+}
+
+.faq-item.active .faq-answer{
+max-height:200px;
+}
+
+.faq-item.active .faq-question i{
+transform:rotate(180deg);
+}
+
+</style>
+<!-- HELP CENTER CARDS -->
+
+<section class="help-center-section">
+
+<div class="section-title">
+<h2>Help Center</h2>
+<p>Get support and information about MO Music services</p>
+</div>
+
+<div class="help-grid">
+
+<!-- CARD 1 -->
+
+<div class="help-card">
+
+<div class="help-icon">
+<i class="fas fa-headphones"></i>
+</div>
+
+<h3>Music Fans & Listeners</h3>
+
+<p>
+Discover trending songs, playlists,
+artists and personalized music experiences.
+</p>
+
+<button onclick="showToast('🎵 Opening Fans Support')">
+Learn More
+</button>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="help-card">
+
+<div class="help-icon">
+<i class="fas fa-microphone"></i>
+</div>
+
+<h3>Creators on MO Music</h3>
+
+<p>
+Upload tracks, grow your audience,
+manage releases and monetize your music.
+</p>
+
+<button onclick="showToast('🎤 Opening Creator Support')">
+Learn More
+</button>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="help-card">
+
+<div class="help-icon">
+<i class="fas fa-user"></i>
+</div>
+
+<h3>My Account</h3>
+
+<p>
+Manage account settings, passwords,
+profiles and connected devices securely.
+</p>
+
+<button onclick="showToast('👤 Opening Account Settings')">
+Learn More
+</button>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="help-card">
+
+<div class="help-icon">
+<i class="fas fa-credit-card"></i>
+</div>
+
+<h3>Subscriptions & Billing</h3>
+
+<p>
+Update payment methods, manage plans,
+billing history and premium subscriptions.
+</p>
+
+<button onclick="showToast('💳 Opening Billing Support')">
+Learn More
+</button>
+
+</div>
+
+<!-- CARD 5 -->
+
+<div class="help-card">
+
+<div class="help-icon">
+<i class="fas fa-compact-disc"></i>
+</div>
+
+<h3>Music Distribution</h3>
+
+<p>
+Distribute songs to streaming platforms
+and track global music performance.
+</p>
+
+<button onclick="showToast('📀 Opening Distribution')">
+Learn More
+</button>
+
+</div>
+
+<!-- CARD 6 -->
+
+<div class="help-card">
+
+<div class="help-icon">
+<i class="fas fa-share-alt"></i>
+</div>
+
+<h3>Share & Embed</h3>
+
+<p>
+Share tracks on social media,
+websites and blogs using embed tools.
+</p>
+
+<button onclick="showToast('📢 Opening Sharing Tools')">
+Learn More
+</button>
+
+</div>
+
+<!-- CARD 7 -->
+
+<div class="help-card">
+
+<div class="help-icon">
+<i class="fas fa-shield-alt"></i>
+</div>
+
+<h3>Copyright Protection</h3>
+
+<p>
+Protect your songs, report stolen content
+and manage ownership rights.
+</p>
+
+<button onclick="showToast('🛡 Opening Copyright Center')">
+Learn More
+</button>
+
+</div>
+
+<!-- CARD 8 -->
+
+<div class="help-card">
+
+<div class="help-icon">
+<i class="fas fa-gavel"></i>
+</div>
+
+<h3>Legal & Reporting</h3>
+
+<p>
+Report abuse, policy violations,
+fraud and legal music issues.
+</p>
+
+<button onclick="showToast('⚖ Opening Legal Support')">
+Learn More
+</button>
+
+</div>
+
+<!-- CARD 9 -->
+
+<div class="help-card">
+
+<div class="help-icon">
+<i class="fas fa-server"></i>
+</div>
+
+<h3>Platform Status</h3>
+
+<p>
+Check server performance,
+system maintenance and live updates.
+</p>
+
+<button onclick="showToast('🖥 Checking System Status')">
+Learn More
+</button>
+
+</div>
+
+</div>
+
+</section>
+<style>
+/* HELP CENTER */
+
+.help-center-section{
+padding:90px 8%;
+background:#f3f4f6;
+}
+
+.help-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:28px;
+margin-top:50px;
+}
+
+.help-card{
+background:white;
+border-radius:18px;
+padding:35px 25px;
+text-align:center;
+border:1px solid #e5e7eb;
+transition:.3s;
+box-shadow:0 5px 15px rgba(0,0,0,.04);
+}
+
+.help-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.help-icon{
+width:70px;
+height:70px;
+margin:auto;
+margin-bottom:25px;
+border-radius:50%;
+background:#ff5a00;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:1.5rem;
+color:white;
+}
+
+.help-card h3{
+font-size:1.5rem;
+margin-bottom:18px;
+line-height:1.4;
+}
+
+.help-card p{
+color:#6b7280;
+line-height:1.8;
+margin-bottom:25px;
+font-size:.95rem;
+}
+
+.help-card button{
+padding:14px 24px;
+border:none;
+background:#2563eb;
+color:white;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.help-card button:hover{
+background:#1d4ed8;
+}
+
+</style>
+
+<!-- ARTIST PHOTO CARDS -->
+<!-- SHORTS SECTION -->
+
+<section id="shorts">
+
+<div class="section-title">
+<h2>🎬 Music Shorts</h2>
+<p>Watch trending short music videos</p>
+</div>
+
+<div class="shorts-container">
+
+<!-- SHORT 1 -->
+<div class="short-card">
+
+<video controls poster="NZABYAMAMAZA - Inshuti Za Yesu Choir EPR Kanombe (Official Live Video).mp4">
+<source src="NZABYAMAMAZA - Inshuti Za Yesu Choir EPR Kanombe (Official Live Video).mp4" type="video/mp4">
+</video>
+
+<div class="short-info">
+<h3>Studio Vibes 🔥</h3>
+<p>12K Views • 2 days ago</p>
+</div>
+
+</div>
+
+<!-- SHORT 2 -->
+<div class="short-card">
+
+<video controls poster="HASHIMWE - Inshuti Za Yesu Choir EPR Kanombe (Official Live Video)_2.mp4">
+<source src="HASHIMWE - Inshuti Za Yesu Choir EPR Kanombe (Official Live Video)_2.mp4" type="video/mp4">
+</video>
+
+<div class="short-info">
+<h3>Amapiano Dance 💃</h3>
+<p>30K Views • 1 week ago</p>
+</div>
+
+</div>
+
+<!-- SHORT 3 -->
+<div class="short-card">
+
+<video controls poster="IMPANO Y'IMANA - Inshuti Za Yesu Choir EPR Kanombe (Official Live Video).mp4">
+<source src="IMPANO Y'IMANA - Inshuti Za Yesu Choir EPR Kanombe (Official Live Video).mp4" type="video/mp4">
+</video>
+
+<div class="short-info">
+<h3>Live Concert 🎤</h3>
+<p>55K Views • 5 hours ago</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+/* SHORTS SECTION */
+
+#shorts{
+padding:90px 8%;
+background:#f8fafc;
+}
+
+.shorts-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.short-card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.short-card:hover{
+transform:translateY(-10px);
+}
+
+.short-card video{
+width:100%;
+height:500px;
+object-fit:cover;
+background:black;
+}
+
+.short-info{
+padding:20px;
+}
+
+.short-info h3{
+font-size:1.2rem;
+margin-bottom:10px;
+color:#111827;
+}
+
+.short-info p{
+font-size:.9rem;
+color:#6b7280;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.short-card video{
+height:420px;
+}
+
+}
+
+</style>
+
+<button class="about-btn" onclick="openInfo()">
+ℹ️ About Website Owner
+</button>
+
+<div class="owner-popup" id="ownerPopup">
+
+<div class="popup-content">
+
+<span class="close-btn" onclick="closeInfo()">
+&times;
+</span>
+
+<h2>👨‍💻 Website Developer</h2>
+
+<img src="Capture 456789.PNG" class="owner-img">
+
+<h3>Mugisha Olivier</h3>
+
+<p>
+Founder of HABUMUGISHA Music PRODUCTION.
+Professional Website Developer, Music Producer
+and Gospel Content Creator from Rwanda.
+</p>
+
+<div class="owner-details">
+
+<p><i class="fas fa-phone"></i> 0788704773</p>
+
+<p><i class="fas fa-envelope"></i>
+habumugishamusic@gmail.com
+</p>
+
+<p><i class="fas fa-location-dot"></i>
+Kigali, Rwanda
+</p>
+
+</div>
+
+</div><script>
+
+function openInfo(){
+document.getElementById("ownerPopup").style.display="flex";
+}
+
+function closeInfo(){
+document.getElementById("ownerPopup").style.display="none";
+}
+
+</script>
+
+</div>
+<style>
+.about-btn{
+padding:15px 30px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:12px;
+font-size:1rem;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.about-btn:hover{
+background:#1d4ed8;
+transform:translateY(-4px);
+}
+
+/* POPUP */
+
+.owner-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:rgba(0,0,0,.7);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999999;
+padding:20px;
+}
+
+.popup-content{
+background:white;
+width:100%;
+max-width:450px;
+padding:40px;
+border-radius:25px;
+text-align:center;
+position:relative;
+animation:popup .4s ease;
+}
+
+@keyframes popup{
+from{
+transform:scale(.7);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.close-btn{
+position:absolute;
+top:15px;
+right:20px;
+font-size:2rem;
+cursor:pointer;
+color:#666;
+}
+
+.owner-img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin:20px 0;
+border:5px solid #2563eb;
+}
+
+.popup-content h2{
+color:#2563eb;
+margin-bottom:10px;
+}
+
+.popup-content h3{
+margin-bottom:15px;
+font-size:1.5rem;
+}
+
+.popup-content p{
+color:#555;
+line-height:1.8;
+}
+
+.owner-details{
+margin-top:20px;
+text-align:left;
+}
+
+.owner-details p{
+margin-bottom:12px;
+font-size:1rem;
+}
+
+
+</style>
+
+<!-- LEADERS SECTION -->
+
+<section id="leaders" class="leaders-section">
+
+<div class="section-title">
+<h2>👔 Abayobozi Bakorana Na HABUMUGISHA</h2>
+<p>Meet our professional leadership team</p>
+</div>
+
+<div class="leaders-grid">
+
+<!-- LEADER 1 -->
+
+<div class="leader-card">
+
+<img src="Capture 456789.PNG" alt="Leader">
+
+<div class="leader-content">
+
+<h3>Mugisha Olivier</h3>
+
+<span>Founder & CEO</span>
+
+<p>
+Uyobora HABUMUGISHA Music PRODUCTION kandi afite ubunararibonye
+mu gukora websites na music production.
+</p>
+
+<div class="leader-socials">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</div>
+
+</div>
+
+<!-- LEADER 2 -->
+
+<div class="leader-card">
+
+<img src="Capture dirijate.PNG" alt="Leader">
+
+<div class="leader-content">
+
+<h3>kevin</h3>
+
+<span>Music Director</span>
+
+<p>
+Ashinzwe kuyobora ibikorwa bya muzika,
+gufasha abahanzi no gukurikirana projects.
+</p>
+
+<div class="leader-socials">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</div>
+
+</div>
+
+<!-- LEADER 3 -->
+
+<div class="leader-card">
+
+<img src="Capture gigi.PNG" alt="Leader">
+
+<div class="leader-content">
+
+<h3>dirijac</h3>
+
+<span>Studio Manager</span>
+
+<p>
+Ashinzwe studio sessions,
+audio recording ndetse no gutunganya amajwi.
+</p>
+
+<div class="leader-socials">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</div>
+
+</div>
+
+<!-- LEADER 4 -->
+
+<div class="leader-card">
+
+<img src="Capture jane.PNG" alt="Leader">
+
+<div class="leader-content">
+
+<h3>Janine Muhoza</h3>
+
+<span>Marketing Manager</span>
+
+<p>
+Ashinzwe kwamamaza ibikorwa bya HABUMUGISHA
+ku mbuga nkoranyambaga no ku isi yose.
+</p>
+
+<div class="leader-socials">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</div>
+<div class="leaders-grid">
+
+<!-- LEADER 1 -->
+
+<div class="leader-card">
+
+<img src="Capture olga.PNG" alt="Leader">
+
+<div class="leader-content">
+
+<h3>ishimwe olga</h3>
+
+<span>vices president</span>
+
+<p>
+Uyobora HABUMUGISHA Music PRODUCTION kandi afite ubunararibonye
+kumuyobora muri Choir.
+</p>
+
+<div class="leader-socials">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</div>
+
+</div>
+<div class="leaders-grid">
+
+<!-- LEADER 1 -->
+
+<div class="leader-card">
+
+<img src="Capture paster.PNG" alt="Leader">
+
+<div class="leader-content">
+
+<h3>pst mukankumburwa angelique</h3>
+
+<span>his paster </span>
+
+<p>
+Uyobora HABUMUGISHA Music PRODUCTION kandi afite ubunararibonye
+mu ku musengera.
+</p>
+
+<div class="leader-socials">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+/* LEADERS SECTION */
+
+.leaders-section{
+padding:90px 8%;
+background:#f8fafc;
+}
+
+.leaders-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.leader-card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.leader-card:hover{
+transform:translateY(-10px);
+}
+
+.leader-card img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.leader-content{
+padding:25px;
+text-align:center;
+}
+
+.leader-content h3{
+font-size:1.5rem;
+margin-bottom:10px;
+color:#111827;
+}
+
+.leader-content span{
+display:inline-block;
+background:#2563eb;
+color:white;
+padding:7px 16px;
+border-radius:30px;
+font-size:.85rem;
+margin-bottom:18px;
+}
+
+.leader-content p{
+color:#6b7280;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+.leader-socials{
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.leader-socials a{
+width:45px;
+height:45px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#f3f4f6;
+color:#2563eb;
+text-decoration:none;
+font-size:1.1rem;
+transition:.3s;
+}
+
+.leader-socials a:hover{
+background:#2563eb;
+color:white;
+transform:scale(1.1);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.leader-card img{
+height:280px;
+}
+
+}
+
+</style>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="section-title">
+<h2>📩 Contact Us</h2>
+<p>Reach out for collaborations and music services</p>
+</div>
+
+<form class="contact-form" id="contactForm">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</section>
+<!-- LATEST NEWS SECTION -->
+
+<section id="latest-news">
+
+<div class="section-title">
+<h2>📰 Latest News</h2>
+<p>Updates from HABUMUGISHA Music PRODUCTION</p>
+</div>
+
+<div class="news-grid">
+
+<!-- NEWS 1 -->
+
+<div class="news-card">
+
+<img src="Capture 5678.PNG" alt="News">
+
+<div class="news-content">
+
+<span class="news-date">
+25 May 2026
+</span>
+
+<h3>
+🎵 New Gospel Song Coming Soon
+</h3>
+
+<p>
+HABUMUGISHA Music PRODUCTION is preparing
+a powerful new gospel release recorded in our studio.
+</p>
+
+<button onclick="showToast('🔥 Opening Latest News')">
+Read More
+</button>
+
+</div>
+
+</div>
+
+<!-- NEWS 2 -->
+
+<div class="news-card">
+
+<img src="Capture cross.PNG" alt="Concert">
+
+<div class="news-content">
+
+<span class="news-date">
+20 May 2026
+</span>
+
+<h3>
+🎤 Live Worship Concert in Kigali
+</h3>
+
+<p>
+Artists and choir members gathered for
+a live worship experience full of praise and music.
+</p>
+
+<button onclick="showToast('🎤 Opening Concert News')">
+Read More
+</button>
+
+</div>
+
+</div>
+
+<!-- NEWS 3 -->
+
+<div class="news-card">
+
+<img src="Capture studi.PNG" alt="Studio">
+
+<div class="news-content">
+
+<span class="news-date">
+15 May 2026
+</span>
+
+<h3>
+🎧 New Studio Sessions Started
+</h3>
+
+<p>
+Our producers are now working with upcoming
+artists to create high quality gospel music.
+</p>
+
+<button onclick="showToast('🎧 Opening Studio News')">
+Read More
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+/* LATEST NEWS */
+
+#latest-news{
+padding:90px 8%;
+background:#ffffff;
+}
+
+.news-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.news-card{
+background:#f8fafc;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.news-card:hover{
+transform:translateY(-10px);
+}
+
+.news-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.news-content{
+padding:25px;
+}
+
+.news-date{
+display:inline-block;
+margin-bottom:15px;
+background:#2563eb;
+color:white;
+padding:8px 14px;
+border-radius:30px;
+font-size:.8rem;
+}
+
+.news-content h3{
+font-size:1.4rem;
+margin-bottom:15px;
+color:#111827;
+}
+
+.news-content p{
+color:#6b7280;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+.news-content button{
+padding:14px 24px;
+border:none;
+border-radius:12px;
+background:#111827;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.news-content button:hover{
+background:#2563eb;
+}
+</style>
+
+<!-- FOOTER -->
+
+<footer class="modern-footer">
+
+<div class="footer-cta">
+
+<h2>Can't Find What You're Looking For?</h2>
+
+<p>
+Browse all artists, music and merchandise
+</p>
+
+<button>
+Explore Everything →
+</button>
+
+</div>
+
+<div class="footer-content">
+
+<div class="footer-column">
+
+<h3>Platform</h3>
+
+<a href="#">Home</a>
+<a href="#">Discover</a>
+<a href="#">Studio</a>
+<a href="#">Pricing</a>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Resources</h3>
+
+<a href="#">About Us</a>
+<a href="#">Blog</a>
+<a href="#">Help Center</a>
+<a href="#">Contact</a>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Legal</h3>
+
+<a href="#">Terms & Conditions</a>
+<a href="#">Privacy Policy</a>
+<a href="#">Cookie Policy</a>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Connect</h3>
+
+<div class="socials">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+</div>
+
+<p class="newsletter-text">
+Stay updated with our newsletter
+</p>
+
+<div class="newsletter">
+
+<input type="email" placeholder="Enter your email">
+
+<button>
+Subscribe
+</button>
+
+</div>
+
+<p class="newsletter-text">
+Download Our App
+</p>
+
+<div class="app-buttons">
+
+<button>
+<i class="fab fa-apple"></i> IOS
+</button>
+
+<button>
+<i class="fab fa-android"></i> Android
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div class="footer-logo">
+
+<img src="habu.png" alt="Logo">
+
+<span>HABUMUGISHA Music PRODUCTION</span>
+
+</div>
+
+<p>
+© 2026 HABUMUGISHA Music PRODUCTION. All Rights Reserved.
+</p>
+
+<select>
+<option value="ENG">ENG</option>
+<option value="KINY">KINY</option>
+<option value="FR">FR</option>
+</select>
+
+</div>
+
+</footer>
+<script>
+
+/* ========================= */
+/* COMPLETE MULTI LANGUAGE */
+/* ========================= */
+
+const translations = {
+
+ENG:{
+
+/* NAV */
+
+navHome:"Home",
+navSongs:"Songs",
+navStore:"Store",
+navAbout:"About",
+
+/* HERO */
+
+heroSmall:"MEET UBUHANZI",
+
+heroTitle:`Your Music Career,<br>
+<span>All in One Platform</span>`,
+
+heroText:`Record, distribute and monetize your music with HABUMUGISHA Music PRODUCTION —
+Rwanda's complete hub for artists, producers and creators.`,
+
+startBtn:"Start Now →",
+learnBtn:"Learn More",
+
+trusted:"Trusted by 1,000+ artists across Rwanda",
+
+/* SONGS */
+
+songTitle:"🔥 Trending Songs",
+songDesc:"Discover latest music from HABUMUGISHA Music PRODUCTION",
+
+/* STORE */
+
+storeTitle:"🛒 Music Store",
+storeDesc:"Buy albums, concert tickets and VIP access",
+
+/* ABOUT */
+
+aboutTitle:"🎤 About HABUMUGISHA Music PRODUCTION",
+
+aboutText:`HABUMUGISHA Music PRODUCTION is a modern music platform helping artists
+record, distribute and promote their music professionally.`,
+
+/* CONTACT */
+
+contactTitle:"📩 Contact Us",
+contactDesc:"Reach out for collaborations and music services",
+
+name:"Your Name",
+email:"Your Email",
+message:"Your Message",
+send:"Send Message",
+
+/* FOOTER */
+
+rights:"All Rights Reserved."
+
+},
+
+/* ========================= */
+
+KINY:{
+
+navHome:"Ahabanza",
+navSongs:"Indirimbo",
+navStore:"Ububiko",
+navAbout:"Ibyerekeye",
+
+heroSmall:"MENYA UBUHANZI",
+
+heroTitle:`Umuziki Wawe,<br>
+<span>Kuri Platform Imwe</span>`,
+
+heroText:`Kora, usohore kandi winjize amafaranga mu muziki wawe
+hamwe na HABUMUGISHA Music PRODUCTION.`,
+
+startBtn:"Tangira Nonaha →",
+learnBtn:"Menya Byinshi",
+
+trusted:"Yizewe n'abahanzi barenga 1,000 mu Rwanda",
+
+songTitle:"🔥 Indirimbo Zigezweho",
+songDesc:"Umva indirimbo nshya za HABUMUGISHA Music PRODUCTION",
+
+storeTitle:"🛒 Ububiko bwa Muzika",
+storeDesc:"Gura albums, amatike n'ibindi",
+
+aboutTitle:"🎤 Ibyerekeye HABUMUGISHA Music PRODUCTION",
+
+aboutText:`HABUMUGISHA Music PRODUCTION ni platform igezweho
+ifasha abahanzi gukora no kwamamaza umuziki.`,
+
+contactTitle:"📩 Twandikire",
+contactDesc:"Twandikire ku bijyanye na muzika na collaborations",
+
+name:"Amazina Yawe",
+email:"Email Yawe",
+message:"Andika Message",
+send:"Ohereza Message",
+
+rights:"Uburenganzira Bwose Burarinzwe."
+
+},
+
+/* ========================= */
+
+FR:{
+
+navHome:"Accueil",
+navSongs:"Chansons",
+navStore:"Boutique",
+navAbout:"À propos",
+
+heroSmall:"DÉCOUVRIR LA MUSIQUE",
+
+heroTitle:`Votre carrière musicale,<br>
+<span>sur une seule plateforme</span>`,
+
+heroText:`Enregistrez, distribuez et monétisez votre musique avec
+HABUMUGISHA Music PRODUCTION.`,
+
+startBtn:"Commencer →",
+learnBtn:"En savoir plus",
+
+trusted:"Approuvé par plus de 1 000 artistes au Rwanda",
+
+songTitle:"🔥 Chansons tendance",
+songDesc:"Découvrez les dernières chansons",
+
+storeTitle:"🛒 Boutique Musicale",
+storeDesc:"Achetez albums et billets de concert",
+
+aboutTitle:"🎤 À propos de HABUMUGISHA Music PRODUCTION",
+
+aboutText:`HABUMUGISHA Music PRODUCTION est une plateforme moderne
+pour les artistes et producteurs.`,
+
+contactTitle:"📩 Contactez-nous",
+contactDesc:"Contactez-nous pour collaborations musicales",
+
+name:"Votre Nom",
+email:"Votre Email",
+message:"Votre Message",
+send:"Envoyer",
+
+rights:"Tous droits réservés."
+
+}
+
+};
+
+/* ========================= */
+/* CHANGE LANGUAGE */
+/* ========================= */
+
+function changeLanguage(lang){
+
+/* NAVIGATION */
+
+document.querySelectorAll("nav ul li a")[0].innerText =
+translations[lang].navHome;
+
+document.querySelectorAll("nav ul li a")[1].innerText =
+translations[lang].navSongs;
+
+document.querySelectorAll("nav ul li a")[2].innerText =
+translations[lang].navStore;
+
+document.querySelectorAll("nav ul li a")[3].innerText =
+translations[lang].navAbout;
+
+/* HERO */
+
+document.querySelector(".small-text").innerText =
+translations[lang].heroSmall;
+
+document.querySelector(".hero-text h1").innerHTML =
+translations[lang].heroTitle;
+
+document.querySelector(".hero-text p").innerText =
+translations[lang].heroText;
+
+document.querySelector(".btn-primary").innerText =
+translations[lang].startBtn;
+
+document.querySelector(".btn-secondary").innerText =
+translations[lang].learnBtn;
+
+document.querySelector(".rating span:last-child").innerText =
+translations[lang].trusted;
+
+/* SONG SECTION */
+
+document.querySelector("#songs .section-title h2").innerText =
+translations[lang].songTitle;
+
+document.querySelector("#songs .section-title p").innerText =
+translations[lang].songDesc;
+
+/* STORE */
+
+document.querySelector("#store .section-title h2").innerText =
+translations[lang].storeTitle;
+
+document.querySelector("#store .section-title p").innerText =
+translations[lang].storeDesc;
+
+/* ABOUT */
+
+document.querySelector("#about .section-title h2").innerText =
+translations[lang].aboutTitle;
+
+document.querySelector(".about p").innerText =
+translations[lang].aboutText;
+
+/* CONTACT */
+
+document.querySelector("#contact .section-title h2").innerText =
+translations[lang].contactTitle;
+
+document.querySelector("#contact .section-title p").innerText =
+translations[lang].contactDesc;
+
+document.querySelector('#contact input[type="text"]').placeholder =
+translations[lang].name;
+
+document.querySelector('#contact input[type="email"]').placeholder =
+translations[lang].email;
+
+document.querySelector("#contact textarea").placeholder =
+translations[lang].message;
+
+document.querySelector("#contact button").innerText =
+translations[lang].send;
+
+/* FOOTER */
+
+document.querySelector(".footer-bottom p").innerText =
+"© 2026 HABUMUGISHA Music PRODUCTION. " +
+translations[lang].rights;
+
+/* SAVE */
+
+localStorage.setItem("websiteLanguage",lang);
+
+/* TOAST */
+
+showToast("🌍 " + lang + " Language Activated");
+
+}
+
+/* ========================= */
+/* SELECT */
+/* ========================= */
+
+document.querySelector("select")
+.addEventListener("change",function(){
+
+changeLanguage(this.value);
+
+});
+
+/* ========================= */
+/* AUTO LOAD */
+/* ========================= */
+
+window.addEventListener("load",()=>{
+
+const saved =
+localStorage.getItem("websiteLanguage") || "ENG";
+
+document.querySelector("select").value = saved;
+
+changeLanguage(saved);
+
+});
+
+</script>
+
+<script>
+
+function showToast(message){
+
+const toast=document.createElement('div');
+
+toast.className='toast';
+
+toast.innerText=message;
+
+document.body.appendChild(toast);
+
+setTimeout(()=>{
+toast.remove();
+},3000);
+
+}
+
+document.getElementById('contactForm')
+.addEventListener('submit',function(e){
+
+e.preventDefault();
+
+showToast('✅ Message Sent Successfully');
+
+this.reset();
+
+});
+
+</script>
+</body>
+</html>
